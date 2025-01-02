@@ -1,6 +1,6 @@
 export const categories = [
   {
-    name: "Top Hits",
+    name: "TopHits",
     products: [
       {
         id: 1,

@@ -1,29 +1,47 @@
-import React from "react";
-
-type Props = {};
-
-const CommunityProfile = ({ params }: { params: { id: string } }) => {
-  const { id } = params;
-
-  return <div>CommunityProfile</div>;
-};
-
-export default CommunityProfile;
-
+import React, { Profiler } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Youtube, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { categories } from "@/lib/data";
 
-function Page() {
+type Props = {};
+
+const CommunityProfile = ({
+  params,
+}: {
+  params: { id: string; category: string };
+}) => {
+  const { id, category } = params;
+
+  const file = categories.filter((doc) => doc.name === category)[0];
+
+  const profile = file.products.filter(
+    (product: { name: string; id: number; image: string; artist: string }) => {
+      return product.id === +id;
+    }
+  );
+
+  console.log(profile);
+
+  return <Profile profile={profile[0]} />;
+};
+
+export default CommunityProfile;
+
+function Profile({
+  profile,
+}: {
+  profile: { id: number; name: string; image: string; artist: string };
+}) {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <div className="relative h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/placeholder.svg?height=300&width=1200"
+            src={profile.image}
             alt="Background"
             width={1200}
             height={300}
@@ -32,7 +50,7 @@ function Page() {
           />
         </div>
         <h1 className="relative text-6xl md:text-8xl font-bold tracking-tighter z-10">
-          AARON BENNETT
+          {profile.artist}
         </h1>
       </div>
 
@@ -40,14 +58,14 @@ function Page() {
       <div className="flex flex-col items-center -mt-12 relative z-20 px-4">
         <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-black">
           <Image
-            src="/placeholder.svg?height=96&width=96"
+            src={profile.image}
             alt="Aaron Bennett"
             width={96}
             height={96}
             className="w-full h-full object-cover"
           />
         </div>
-        <h2 className="text-2xl font-semibold mt-4">Aaron Bennett</h2>
+        <h2 className="text-2xl font-semibold mt-4">{profile.artist}</h2>
         <p className="text-gray-400">Helping you navigate the crypto world</p>
         <div className="flex gap-2 text-sm text-gray-400 mt-2">
           <span>1,346 members</span>

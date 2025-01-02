@@ -26,7 +26,7 @@ export function InViewImagesGrid() {
               "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEODqeCcEuXN4GYFNu1Doh7dS5gomDgKC2wQ&s",
               "https://yt3.googleusercontent.com/m6Lq0zDJ8qQfipdpk-bWFVUswXZhnxNbIJH7qgv6wv_RnjcYvZrrIYj--Nz3rDd_m5BSLfUYaQ=s176-c-k-c0x00ffffff-no-rj-mo",
-              "https://images.beta.cosmos.so/86af92c0-064d-4801-b7ed-232535b03328?format=jpeg",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkqkG2LwaNwrb59tM-jgrG793usvyX8LSrVbitN9EDdyU3dZ1g1YjKE8Iz8Nvvdg5ZbrRlg2KewOFjUCoil-OmoQ",
               "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
               "https://th.bing.com/th/id/OIP.StotjN4kdzLr-wgoZQ-xkAHaJP?w=156&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStLBs8iyDb-u0Mr9nGSjS9aZel-XG52NJMeA&s",

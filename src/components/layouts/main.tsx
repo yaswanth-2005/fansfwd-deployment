@@ -6,10 +6,12 @@ import { InViewImagesGrid } from "../global/inView";
 import SpotlightBasic from "../global/Spotlight";
 import { Button } from "../ui/button";
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 
 type Props = {};
 
 const Main = (props: Props) => {
+  const router = useRouter();
   return (
     <div className="flex flex-col gap-5">
       <motion.nav
@@ -42,7 +44,10 @@ const Main = (props: Props) => {
               <li>Home</li>
               <li>Home</li>
             </ul>
-            <Button className="rounded-full text-white border border-blue-500 bg-blue-600/40 ">
+            <Button
+              onClick={() => router.push("/login")}
+              className="rounded-full text-white border border-blue-500 bg-blue-600/40 "
+            >
               Sign In
             </Button>
           </div>

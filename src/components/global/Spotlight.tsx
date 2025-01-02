@@ -1,9 +1,8 @@
-import { Spotlight } from "../ui/spotlight";
-import { Cursor1 } from "./cursor";
+import { Spotlight } from "@/components/ui/spotlight";
 
-export function SpotlightBasic() {
+export default function SpotlightBasic() {
   return (
-    <div className="relative aspect-video h-[200px] w-full rounded  bg-black dark:border-zinc-800 dark:bg-black">
+    <div className="relative aspect-video h-full bg-black border-zinc-800">
       <Spotlight
         className="bg-zinc-700 blur-2xl"
         size={64}
@@ -12,13 +11,24 @@ export function SpotlightBasic() {
           duration: 0.1,
         }}
       />
-      <div className="w-full h-full">
-        <Cursor1 />
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded text-white text-5xl p-2 dark:bg-black w-full h-200">
-          <h1 className="flex flex-col justify-center items-center">
-            Complete Creative Control
-          </h1>
-        </div>
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded bg-white p-2 dark:bg-black">
+        <svg
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 70 70"
+          aria-label="MP Logo"
+          width="70"
+          height="70"
+          className="h-8 w-auto stroke-black dark:stroke-white"
+          fill="none"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="3"
+            d="M51.883 26.495c-7.277-4.124-18.08-7.004-26.519-7.425-2.357-.118-4.407-.244-6.364 1.06M59.642 51c-10.47-7.25-26.594-13.426-39.514-15.664-3.61-.625-6.744-1.202-9.991.263"
+          ></path>
+        </svg>
       </div>
     </div>
   );

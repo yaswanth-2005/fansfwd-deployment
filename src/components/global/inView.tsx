@@ -50,7 +50,7 @@ export function InViewImagesGrid() {
                   <img
                     src={imgSrc}
                     alt={`Image placeholder from cosmos.so, index:${index}`}
-                    className="size-full rounded-lg object-contain"
+                    className="size-full rounded-lg object-contain border-2 border-blue-600"
                   />
                 </motion.div>
               );

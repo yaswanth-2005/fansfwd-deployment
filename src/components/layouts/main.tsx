@@ -7,6 +7,7 @@ import SpotlightBasic from "../global/Spotlight";
 import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
+import SpotifyStyleCarousel from "../global/spotify-style-carousel";
 
 type Props = {};
 
@@ -57,8 +58,11 @@ const Main = (props: Props) => {
       <div className="min-h-screen p-5">
         <InViewImagesGrid />
       </div>
-      <div className="min-h-screen p-5">
+      {/* <div className="min-h-screen p-5">
         <SpotlightBasic />
+      </div> */}
+      <div className="min-h-screen p-5">
+        <SpotifyStyleCarousel />
       </div>
     </div>
   );

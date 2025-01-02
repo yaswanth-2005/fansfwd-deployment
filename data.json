@@ -1,0 +1,137 @@
+{
+  "Technology": [
+    {
+      "id": 1,
+      "name": "Tech Wiser",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQphsWykUYrem7ZeSnqDZYho9Fcpm3eTSwMIA&s"
+    },
+    {
+      "id": 2,
+      "name": "Technical Guruji",
+      "image": "https://i.pinimg.com/564x/76/b6/f4/76b6f4c8d64f40bacc2f4f2fc2804bcc.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tech Burner",
+      "image": "https://entrepreneurstoday.in/wp-content/uploads/2023/05/Screenshot-2023-05-01-at-6.21.42-PM.png"
+    },
+    {
+      "id": 4,
+      "name": "Prasad tech in telugu",
+      "image": "https://images.news18.com/ibnlive/uploads/2022/08/devarakonda-varaprasad-youtuber.png"
+    },
+    {
+      "id": 5,
+      "name": "Mr Who is the Boss",
+      "image": "https://cdn.prod.website-files.com/630bc46507ee3300e9a1f6e8/631012146987144054e251a8_mrwhosetheboss.jpeg"
+    }
+  ],
+  "Laptops": [
+    {
+      "id": 1,
+      "name": "MacBook Pro M3",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Dell XPS 15",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "HP Spectre x360",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Lenovo ThinkPad X1",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Asus ROG Zephyrus",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "Wearables": [
+    {
+      "id": 1,
+      "name": "Apple Watch Series 9",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy Watch 6",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Fitbit Charge 6",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Garmin Forerunner 965",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Huawei Watch GT 4",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "Tablets": [
+    {
+      "id": 1,
+      "name": "iPad Pro 12.9",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy Tab S9",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Microsoft Surface Pro 9",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Lenovo Tab P12 Pro",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Amazon Fire Max 11",
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "Smart Home": [
+    {
+      "id": 1,
+      "name": "Amazon Echo Dot 5th Gen",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Google Nest Hub Max",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Philips Hue Lights",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Ring Video Doorbell 4",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "Arlo Pro 5 Security Camera",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}

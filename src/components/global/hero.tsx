@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import TypingAnimation from "../ui/typing-animation";
-import RINGS from "vanta/dist/vanta.rings.min";
 import { Button } from "../ui/button";
 import { ArrowDown } from "lucide-react";
 import { motion } from "motion/react";
@@ -10,22 +9,6 @@ import { Badge } from "../ui/badge";
 type Props = {};
 
 const Hero = (props: Props) => {
-  const [vantaEffect, setVantaEffect] = useState(null);
-  const myRef = useRef(null);
-  useEffect(() => {
-    if (!vantaEffect) {
-      if (myRef && myRef.current)
-        setVantaEffect(
-          RINGS({
-            el: myRef?.current,
-          })
-        );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
-
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: {

@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: "encrypted-tbn0.gstatic.com",
       },
+      {
+        hostname: "idsb.tmgrup.com.tr",
+      },
     ],
   },
 };

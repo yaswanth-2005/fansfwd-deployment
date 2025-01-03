@@ -23,14 +23,15 @@ const CommunityProfile = ({
     }
   );
 
-
-  return <Profile profile={profile[0]} />;
+  return <Profile profile={profile[0]} category={category} id={id} />;
 };
 
 export default CommunityProfile;
 
 function Profile({
   profile,
+  category,
+  id,
 }: {
   profile: {
     id: number;
@@ -39,6 +40,8 @@ function Profile({
     artist: string;
     pirce: number;
   };
+  category: string;
+  id: string;
 }) {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -81,7 +84,10 @@ function Profile({
           <span>•</span>
           <span className="text-white">${profile.pirce}/month</span>
         </div>
-        <Button className="mt-4 w-[200px]">Join for free</Button>
+
+        <Link href={`/${category}/${id}/payment`}>
+          <Button className="mt-4 w-[200px]">Join </Button>
+        </Link>
         <div className="flex gap-4 mt-4">
           <Link
             href="#"
@@ -133,7 +139,9 @@ function Profile({
                 <span className="text-gray-400">/month</span>
               </div>
             </div>
-            <Button className="w-full">Join</Button>
+            <Link href={`/${category}/${id}/payment`}>
+              <Button className="w-full">Join</Button>
+            </Link>
             <div className="space-y-4">
               <h4 className="text-sm font-medium text-gray-400">
                 What's included

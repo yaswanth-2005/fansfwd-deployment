@@ -23,17 +23,25 @@ const CommunityProfile = ({
     }
   );
 
-  console.log(profile);
-
-  return <Profile profile={profile[0]} />;
+  return <Profile profile={profile[0]} category={category} id={id} />;
 };
 
 export default CommunityProfile;
 
 function Profile({
   profile,
+  category,
+  id,
 }: {
-  profile: { id: number; name: string; image: string; artist: string ; pirce: number };
+  profile: {
+    id: number;
+    name: string;
+    image: string;
+    artist: string;
+    pirce: number;
+  };
+  category: string;
+  id: string;
 }) {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -65,16 +73,21 @@ function Profile({
             className="w-full h-full object-cover"
           />
         </div>
-        <h2 className="text-2xl font-semibold mt-4">{profile.artist}</h2>
+        <h2 className="text-2xl font-semibold mt-4 text-white">
+          {profile.artist}
+        </h2>
         <p className="text-gray-400">Helping you navigate the crypto world</p>
         <div className="flex gap-2 text-sm text-gray-400 mt-2">
           <span>1,346 members</span>
           <span>•</span>
           <span>20 posts</span>
           <span>•</span>
-          <span>${profile.pirce}/month</span>
+          <span className="text-white">${profile.pirce}/month</span>
         </div>
-        <Button className="mt-4 w-[200px]">Join for free</Button>
+
+        <Link href={`/${category}/${id}/payment`}>
+          <Button className="mt-4 w-[200px]">Join </Button>
+        </Link>
         <div className="flex gap-4 mt-4">
           <Link
             href="#"
@@ -116,13 +129,19 @@ function Profile({
         <Card className="bg-gray-900 border-gray-800 p-6">
           <div className="space-y-4">
             <div>
-              <h3 className="text-lg font-medium">Aaron's Community</h3>
+              <h3 className="text-lg font-medium text-white">
+                Aaron's Community
+              </h3>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold">$19.99</span>
+                <span className="text-2xl font-bold text-white">
+                  ${profile.pirce}
+                </span>
                 <span className="text-gray-400">/month</span>
               </div>
             </div>
-            <Button className="w-full">Join</Button>
+            <Link href={`/${category}/${id}/payment`}>
+              <Button className="w-full">Join</Button>
+            </Link>
             <div className="space-y-4">
               <h4 className="text-sm font-medium text-gray-400">
                 What's included

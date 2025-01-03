@@ -23,16 +23,17 @@ export function InViewImagesGrid() {
         >
           <div className="columns-2 gap-4 px-8 sm:columns-3">
             {[
-              "https://images.beta.cosmos.so/1b6f1bee-1b4c-4035-9e93-c93ef4d445e1?format=jpeg",
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEODqeCcEuXN4GYFNu1Doh7dS5gomDgKC2wQ&s",
-              "https://yt3.googleusercontent.com/m6Lq0zDJ8qQfipdpk-bWFVUswXZhnxNbIJH7qgv6wv_RnjcYvZrrIYj--Nz3rDd_m5BSLfUYaQ=s176-c-k-c0x00ffffff-no-rj-mo",
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkqkG2LwaNwrb59tM-jgrG793usvyX8LSrVbitN9EDdyU3dZ1g1YjKE8Iz8Nvvdg5ZbrRlg2KewOFjUCoil-OmoQ",
-              "https://images.beta.cosmos.so/399e2a4a-e118-4aaf-9c7e-155ed18f6556?format=jpeg",
-              "https://th.bing.com/th/id/OIP.StotjN4kdzLr-wgoZQ-xkAHaJP?w=156&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+              "https://yt3.googleusercontent.com/DLer1VC9KzQIOiTYFPrNXSndwrgXHplj6e4r0_JNkPcTaB0PfRwDQTPGWhhXoA12JiSGi991rCU=s160-c-k-c0x00ffffff-no-rj",
+              "https://yt3.googleusercontent.com/r09RpDUvcrXhuGYFqVujMChDqX_MTQbH6ronxmHWQuT5detla632gIkElqz-1lvKBAz7rzR50g=s160-c-k-c0x00ffffff-no-rj",
+              "https://yt3.googleusercontent.com/j01juFvKwHnKHdgcklpPKLkfNBuGbGJKLBwXVhbN_5LeCU3S9bTsHBL-MKPRQCjpZpfPJ_dJ=s160-c-k-c0x00ffffff-no-rj",
+              "https://yt3.googleusercontent.com/66OTTHSdZwqnz75I-z_sCFmf-EKQ9q4_OZsluCDm3KqPrcauc16Si1gGQuUgqe82Pi05Y2vnpw=s160-c-k-c0x00ffffff-no-rj",
+              "https://yt3.googleusercontent.com/vLLYSMUqgq8v8lNVFodiBTrvDZJvTPYkDATk0LxPcYQcZVCqHvca499gj2ZkdroX3LfJtWg5=s160-c-k-c0x00ffffff-no-rj",
+              "https://yt3.googleusercontent.com/ytc/AIdro_ljNzHZ3SguEFdt1hJvtdx-btjNUQV1plknPziW9278yxA=s160-c-k-c0x00ffffff-no-rj",
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStLBs8iyDb-u0Mr9nGSjS9aZel-XG52NJMeA&s",
+              "https://prasadtechintelugu.com/wp-content/uploads/2023/04/still-for-subscribe-834x1024.png",
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzWt2e9kG3EStglMVgYtf1e0_nu2G46zT0AQ&s",
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7nfkloJmkIv2qSmORIOadcRqX_e2fAxKVdA&sjpeg",
-              "https://prasadtechintelugu.com/wp-content/uploads/2023/04/still-for-subscribe-834x1024.png",
+              "https://yt3.googleusercontent.com/ytc/AIdro_my0_ZKr9LesvJFsIy1SFOJO_FiipmLjjbz-3wQlVOb7Q=s160-c-k-c0x00ffffff-no-rj",
             ].map((imgSrc, index) => {
               return (
                 <motion.div

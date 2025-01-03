@@ -33,7 +33,7 @@ export default CommunityProfile;
 function Profile({
   profile,
 }: {
-  profile: { id: number; name: string; image: string; artist: string };
+  profile: { id: number; name: string; image: string; artist: string ; pirce: number };
 }) {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -72,7 +72,7 @@ function Profile({
           <span>•</span>
           <span>20 posts</span>
           <span>•</span>
-          <span>$9,523/month</span>
+          <span>${profile.pirce}/month</span>
         </div>
         <Button className="mt-4 w-[200px]">Join for free</Button>
         <div className="flex gap-4 mt-4">

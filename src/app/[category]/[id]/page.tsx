@@ -5,6 +5,7 @@ import { Youtube, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { categories } from "@/lib/data";
+import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 
 type Props = {};
 
@@ -14,18 +15,14 @@ const CommunityProfile = ({
   params: { id: string; category: string };
 }) => {
   const { id, category } = params;
-
   const file = categories.filter((doc) => doc.name === category)[0];
-
   const profile = file.products.filter(
     (product: { name: string; id: number; image: string; artist: string }) => {
       return product.id === +id;
     }
   );
-
   return <Profile profile={profile[0]} category={category} id={id} />;
 };
-
 export default CommunityProfile;
 
 function Profile({
@@ -74,7 +71,7 @@ function Profile({
           />
         </div>
         <h2 className="text-2xl font-semibold mt-4 text-white">
-          {profile.artist}
+          {profile.name}
         </h2>
         <p className="text-gray-400">Helping you navigate the crypto world</p>
         <div className="flex gap-2 text-sm text-gray-400 mt-2">
@@ -130,7 +127,7 @@ function Profile({
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium text-white">
-                Aaron's Community
+                {profile.artist}'s Community
               </h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl font-bold text-white">
@@ -174,10 +171,26 @@ function Profile({
 
       {/* Recent Posts Section */}
       <div className="max-w-screen-md mx-auto px-4 pb-12">
-        <h2 className="text-2xl font-semibold mb-6">
-          Recent posts by Aaron Bennett
-        </h2>
-        {/* Add posts content here */}
+        <h2 className="text-2xl font-semibold mb-6">Demo Video</h2>
+        <div className="relative">
+          <HeroVideoDialog
+            className="dark:hidden block"
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+            thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+            thumbnailAlt="Hero Video"
+          />
+          <HeroVideoDialog
+            className="hidden dark:block"
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+            thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+            thumbnailAlt="Hero Video"
+          />
+        </div>
+      </div>
+      <div className="text-center w-full">
+        <h1>You need to upgrade to view the course content</h1>
       </div>
     </div>
   );

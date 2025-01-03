@@ -23,7 +23,6 @@ const CommunityProfile = ({
     }
   );
 
-  console.log(profile);
 
   return <Profile profile={profile[0]} />;
 };
@@ -33,7 +32,13 @@ export default CommunityProfile;
 function Profile({
   profile,
 }: {
-  profile: { id: number; name: string; image: string; artist: string };
+  profile: {
+    id: number;
+    name: string;
+    image: string;
+    artist: string;
+    pirce: number;
+  };
 }) {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -65,14 +70,16 @@ function Profile({
             className="w-full h-full object-cover"
           />
         </div>
-        <h2 className="text-2xl font-semibold mt-4">{profile.artist}</h2>
+        <h2 className="text-2xl font-semibold mt-4 text-white">
+          {profile.artist}
+        </h2>
         <p className="text-gray-400">Helping you navigate the crypto world</p>
         <div className="flex gap-2 text-sm text-gray-400 mt-2">
           <span>1,346 members</span>
           <span>•</span>
           <span>20 posts</span>
           <span>•</span>
-          <span>$9,523/month</span>
+          <span className="text-white">${profile.pirce}/month</span>
         </div>
         <Button className="mt-4 w-[200px]">Join for free</Button>
         <div className="flex gap-4 mt-4">
@@ -116,9 +123,13 @@ function Profile({
         <Card className="bg-gray-900 border-gray-800 p-6">
           <div className="space-y-4">
             <div>
-              <h3 className="text-lg font-medium">Aaron's Community</h3>
+              <h3 className="text-lg font-medium text-white">
+                Aaron's Community
+              </h3>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold">$19.99</span>
+                <span className="text-2xl font-bold text-white">
+                  ${profile.pirce}
+                </span>
                 <span className="text-gray-400">/month</span>
               </div>
             </div>

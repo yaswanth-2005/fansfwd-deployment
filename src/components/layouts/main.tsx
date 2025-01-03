@@ -41,9 +41,9 @@ const Main = (props: Props) => {
           <div className="flex justify-between gap-3 items-center w-1/3">
             <ul className="flex flex-1 justify-around">
               <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li>Pricing</li>
+              <li>Features</li>
+              <li>Resources</li>
             </ul>
             <Button
               onClick={() => router.push("/login")}

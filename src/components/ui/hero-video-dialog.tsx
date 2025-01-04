@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, Play, XIcon } from "lucide-react";
+import YouTube, { YouTubeProps } from "react-youtube";
 
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
@@ -77,6 +78,50 @@ export default function HeroVideoDialog({
 }: HeroVideoProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const selectedAnimation = animationVariants[animationStyle];
+  const iframeRef = useRef<HTMLDivElement>(null);
+  const playerRef = useRef<any>(null);
+  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+  const [currentPrice, setCurrentPrice] = useState(0);
+
+  const onPlayerReady: YouTubeProps["onReady"] = (event) => {
+    playerRef.current = event.target;
+  };
+
+  const onPlayerStateChange: YouTubeProps["onStateChange"] = (event) => {
+    const playerState = event.data;
+
+    if (playerState === 1) {
+      // Video is playing
+      if (!intervalId) {
+        const id = setInterval(() => {
+          const currentTime = playerRef.current?.getCurrentTime();
+          setCurrentPrice(() => +(currentTime * 0.05).toFixed(2));
+        }, 5000);
+        setIntervalId(id);
+      }
+    } else {
+      if (intervalId) {
+        clearInterval(intervalId);
+        setIntervalId(null);
+      }
+    }
+  };
+
+  const opts: YouTubeProps["opts"] = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
+  useEffect(() => {
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [intervalId]);
 
   return (
     <div className={cn("relative", className)}>
@@ -114,7 +159,7 @@ export default function HeroVideoDialog({
             animate={{ opacity: 1 }}
             onClick={() => setIsVideoOpen(false)}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50  items-center justify-center bg-black/50 backdrop-blur-md  flex flex-col gap-5"
+            className="fixed inset-0 z-50 flex flex-col gap-5 items-center justify-center bg-black/50 backdrop-blur-md"
           >
             <motion.div
               {...selectedAnimation}
@@ -125,15 +170,18 @@ export default function HeroVideoDialog({
                 <XIcon className="size-5" />
               </motion.button>
               <div className="relative isolate z-[1] size-full overflow-hidden rounded-2xl border-2 border-white">
-                <iframe
-                  src={videoSrc}
-                  className="size-full rounded-2xl"
-                  allowFullScreen
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                ></iframe>
+                <YouTube
+                  ref={iframeRef}
+                  videoId={videoSrc.split("v=")[1].split("&")[0]}
+                  opts={opts}
+                  onReady={onPlayerReady}
+                  onStateChange={onPlayerStateChange}
+                  iframeClassName="w-full h-full"
+                  className="w-full h-full"
+                />
               </div>
               <Button className="self-end bg-[#1d4ed8]">
-                Pay 5$ to continue
+                charged ${currentPrice}
                 <ArrowRight />
               </Button>
             </motion.div>

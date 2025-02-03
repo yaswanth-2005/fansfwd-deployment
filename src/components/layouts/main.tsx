@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
 import SpotifyStyleCarousel from "../global/spotify-style-carousel";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 type Props = {};
 
@@ -40,17 +41,26 @@ const Main = (props: Props) => {
           </span>
           <div className="flex justify-between gap-3 items-center w-1/3">
             <ul className="flex flex-1 justify-around">
-              <li>Home</li>
+              <li onClick={() => router.push("/")}>Home</li>
               <li>Pricing</li>
               <li>Features</li>
-              <li>Resources</li>
+              <li>
+                <Button
+                  className="bg-[#1d4ed8] text-white"
+                  onClick={() => router.push("/creator")}
+                >
+                  Become a Creator
+                </Button>
+              </li>
             </ul>
-            <Button
-              onClick={() => router.push("/login")}
-              className="rounded-full text-white border border-blue-500 bg-blue-600/40 "
-            >
-              Sign In
-            </Button>
+            <SignedOut>
+              <div className="border-blue-500 border-2 p-3 rounded-full">
+                <SignInButton />
+              </div>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
         </div>
       </motion.nav>

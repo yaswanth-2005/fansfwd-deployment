@@ -37,12 +37,6 @@ export default function PaymentGateway({
 
   return (
     <div className="min-h-screen bg-black text-gray-100 flex flex-col">
-      <header className="bg-black p-4 border border-primary">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold">Brandz Hub</h1>
-        </div>
-      </header>
-
       <main className="flex-grow container mx-auto px-4 py-8 flex gap-10 flex-col">
         <h1 className="text-4xl font-semibold">
           <span className="text-[#1d4ed8] text-5xl">{profile[0].name}</span>

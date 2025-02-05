@@ -38,9 +38,8 @@ export default function SpotifyStyleCarousel() {
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {category.products.map((product) => (
-                <Link href={`/${category.name}/${product.id}`}>
+                <Link key={product.id} href={`/${category.name}/${product.id}`}>
                   <Card
-                    key={product.id}
                     className="flex-shrink-0 w-40 bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 cursor-pointer"
                     onMouseEnter={() => setHoveredId(product.id)}
                     onMouseLeave={() => setHoveredId(null)}
@@ -70,6 +69,7 @@ export default function SpotifyStyleCarousel() {
                   </Card>
                 </Link>
               ))}
+
               {/* {category.products.map((product) => (
                 <Link href={`/${category.name}/${product.id}`}>
                   <Card

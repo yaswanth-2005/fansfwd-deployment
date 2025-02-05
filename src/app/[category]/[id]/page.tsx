@@ -127,7 +127,7 @@ function Profile({
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium text-white">
-                {profile.artist}'s Community
+                {profile.artist}&apos;s Community
               </h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl font-bold text-white">
@@ -141,11 +141,11 @@ function Profile({
             </Link>
             <div className="space-y-4">
               <h4 className="text-sm font-medium text-gray-400">
-                What's included
+                What&apos;s included
               </h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>
-                  • Aaron's Insights (More frequent updates on the market,
+                  • Aaron&apos;s Insights (More frequent updates on the market,
                   changes to my portfolio, buys & sells)
                 </li>
                 <li>• Market Analysis & Leveraging My 11 Years In Crypto</li>

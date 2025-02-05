@@ -41,6 +41,7 @@ export default function CategoryCarousel() {
               <CardTitle>{product.name}</CardTitle>
             </CardHeader>
             <CardContent>
+              {/* @ts-ignore */}
               <p className="text-2xl font-bold">${product.price.toFixed(2)}</p>
             </CardContent>
           </Card>

@@ -1,11 +1,14 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { MoreHorizontal, Search } from "lucide-react";
+import { MoreHorizontal, Router, Search } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function CreatorOnboarding() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <div className="w-full max-w-xl flex flex-col items-center justify-center text-center">
@@ -35,7 +38,10 @@ export default function CreatorOnboarding() {
               className="bg-gray-800 border-gray-700 text-white w-full"
             />
 
-            <Button className="w-full bg-gray-200 text-black hover:bg-gray-300">
+            <Button
+              className="w-full bg-gray-200 text-black hover:bg-gray-300"
+              onClick={() => router.push("/creator-dashboard")}
+            >
               Continue
             </Button>
           </form>

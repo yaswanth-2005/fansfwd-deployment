@@ -14,6 +14,9 @@ const nextConfig = {
       {
         hostname: "hebbkx1anhila5yf.public.blob.vercel-storage.com",
       },
+      {
+        hostname: "example.com",
+      },
     ],
   },
 };

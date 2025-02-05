@@ -46,7 +46,7 @@ const Main = (props: Props) => {
               <li>Features</li>
               <li>
                 <Button
-                  className="bg-[#1d4ed8] text-white"
+                  className="border-[#1d4ed8] border-2 rounded-full text-white bg-transparent"
                   onClick={() => router.push("/creator")}
                 >
                   Become a Creator

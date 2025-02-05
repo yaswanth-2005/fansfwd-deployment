@@ -28,11 +28,13 @@ export default function SpotifyStyleCarousel() {
     <div className="w-full px-16 mx-auto bg-black text-white">
       {categories.map((category) => (
         <div key={category.name} className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">{category.name}</h2>
+          <h2 className="text-2xl text-center font-bold mb-4">
+            {category.name}
+          </h2>
           <div className="relative">
             <div
               ref={scrollContainerRef}
-              className="flex overflow-x-auto space-x-4 scrollbar-hide"
+              className="flex overflow-x-auto space-x-4 scrollbar-hide justify-center"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {category.products.map((product) => (
@@ -68,7 +70,7 @@ export default function SpotifyStyleCarousel() {
                   </Card>
                 </Link>
               ))}
-              {category.products.map((product) => (
+              {/* {category.products.map((product) => (
                 <Link href={`/${category.name}/${product.id}`}>
                   <Card
                     key={product.id}
@@ -100,7 +102,7 @@ export default function SpotifyStyleCarousel() {
                     </CardContent>
                   </Card>
                 </Link>
-              ))}
+              ))} */}
             </div>
             {/* <Button
               variant="ghost"

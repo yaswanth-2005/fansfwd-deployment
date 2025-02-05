@@ -97,7 +97,7 @@ export default function Page() {
           <div className="flex justify-between items-start">
             <div>
               <h2 className="text-xl font-semibold mb-2">
-                Your fansFWD is ready! Here's how to make it yours
+                Your fansFWD is ready! Here&apos;s how to make it yours
               </h2>
               <p className="text-zinc-400">
                 Adding some details helps visitors learn more about you and what

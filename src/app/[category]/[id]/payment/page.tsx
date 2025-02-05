@@ -40,7 +40,7 @@ export default function PaymentGateway({
       <main className="flex-grow container mx-auto px-4 py-8 flex gap-10 flex-col">
         <h1 className="text-4xl font-semibold">
           <span className="text-[#1d4ed8] text-5xl">{profile[0].name}</span>
-          's community
+          &apos;s community
         </h1>
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Credit Card Details Form */}

@@ -16,11 +16,11 @@ export default function CreatorOnboarding() {
         <div className="space-y-6 w-full">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight">
-              Let's name your page
+              Let&apos;s name your page
             </h1>
             <p className="text-gray-400">
-              You can get creative or start with your name. Don't worry, you can
-              always change this later.
+              You can get creative or start with your name. Don&apos;t worry,
+              you can always change this later.
             </p>
           </div>
 
@@ -28,7 +28,7 @@ export default function CreatorOnboarding() {
             <div className="flex items-center space-x-2 justify-center">
               <Checkbox id="age-check" />
               <label htmlFor="age-check" className="text-sm text-gray-400">
-                My page isn't suitable for people under 18
+                My page isn&apos;t suitable for people under 18
               </label>
             </div>
 
